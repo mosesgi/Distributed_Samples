@@ -1,4 +1,4 @@
-package com.moses.distributed.basics.socket;
+package com.moses.distributed.tcpUdp.socket;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.moses.distributed.basics.multicast;
+package com.moses.distributed.tcpUdp.multicast;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
