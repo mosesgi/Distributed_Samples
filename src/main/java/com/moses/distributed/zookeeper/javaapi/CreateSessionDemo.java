@@ -19,8 +19,8 @@ public class CreateSessionDemo {
 				//如果当前连接状态是连接成功的，那么通过计数器控制
 				if(event.getState() == Event.KeeperState.SyncConnected) {
 					latch.countDown();
+					System.out.println(event.getState());
 				}
-				System.out.println(event.getState());
 			}
 			
 		});
