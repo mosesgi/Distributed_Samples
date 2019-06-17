@@ -22,7 +22,7 @@ public interface IUserService {
 	List<User> getUsers();
 	
 	@DELETE
-	@Path("{id}")
+	@Path("{id}")		//header: Accept -> application/xml
 	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 	Response delete(int id);
 	
