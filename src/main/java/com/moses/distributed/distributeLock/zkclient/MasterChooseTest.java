@@ -14,7 +14,7 @@ public class MasterChooseTest {
 		List<MasterSelector> selectors = new ArrayList<>();
 		try {
 			for (int i = 0; i < 10; i++) {
-				ZkClient client = new ZkClient(CONNECTSTRING, 5000, 5000, new SerializableSerializer());
+				ZkClient client = new ZkClient(CONNECTSTRING, 5000, 10000, new SerializableSerializer());
 
 				UserCenter uc = new UserCenter();
 				uc.setMcId(i);
