@@ -26,7 +26,9 @@ public class SerializeTest {
 			oo.flush();
 			ois = new ObjectInputStream(new FileInputStream(new File("person")));
 			Person person1 = (Person) ois.readObject();
+//			person = new Person();
 			person.setName("mic1");
+			person.setAge(28);
 			oo.writeObject(person);
 			oo.flush();
 			System.out.println("序列化成功: " + new File("person").length());
