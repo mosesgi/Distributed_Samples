@@ -24,7 +24,9 @@ public class MasterSelector {
 			}
 		});
 		
-		leaderSelector.autoRequeue();
-		leaderSelector.start();
+		leaderSelector.autoRequeue();		//自动争抢
+		leaderSelector.start();				//开始选举
+		
+		leaderSelector.close();
 	}
 }
