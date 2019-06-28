@@ -6,7 +6,7 @@ import org.apache.curator.retry.ExponentialBackoffRetry;
 
 public class CuratorClientUtils {
 	private static CuratorFramework cf;
-	private final static String CONNECTSTRING ="172.17.95.5:2181, 172.17.95.6:2181, 172.17.95.7:2181";
+	private final static String CONNECTSTRING ="172.18.9.5:2181, 172.18.9.6:2181, 172.18.9.7:2181";
 	
 	public static CuratorFramework getInstance() {
 		cf = CuratorFrameworkFactory.newClient(CONNECTSTRING, 5000, 10000, new ExponentialBackoffRetry(1000, 3));

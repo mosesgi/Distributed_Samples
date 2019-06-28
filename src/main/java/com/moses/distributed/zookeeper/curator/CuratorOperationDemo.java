@@ -10,7 +10,8 @@ import org.apache.curator.framework.api.transaction.CuratorTransactionResult;
 import org.apache.zookeeper.CreateMode;
 
 public class CuratorOperationDemo {
-	public static void main(String[] args) throws Exception{
+	
+	public void demoCode() throws Exception {
 		CuratorFramework cf = CuratorClientUtils.getInstance();
 		System.out.println("连接成功!");
 		System.out.println("Current Thread name: " + Thread.currentThread().getName());
@@ -51,6 +52,16 @@ public class CuratorOperationDemo {
 		for(CuratorTransactionResult result : resultCol) {
 			System.out.println(result.getForPath() + " -> " + result.getType());
 		}
+	}
+	
+	public void deletePath() throws Exception {
+		CuratorFramework cf = CuratorClientUtils.getInstance();
+		cf.delete().deletingChildrenIfNeeded().forPath("/dubbo");
+	}
+	
+	public static void main(String[] args) throws Exception{
+//		new CuratorOperationDemo().demoCode();
 		
+		new CuratorOperationDemo().deletePath();
 	}
 }
