@@ -165,6 +165,13 @@
 			<artifactId>kafka_2.12</artifactId>
 			<version>2.3.0</version>
 		</dependency>
+		
+		<!-- Redis / Jedis -->
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>2.9.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>

@@ -13,7 +13,7 @@ import org.apache.zookeeper.ZooKeeper;
  *
  */
 public class ZookeeperClient {
-	private final static String CONNECTSTRING ="172.17.95.5:2181, 172.17.95.6:2181, 172.17.95.7:2181";
+	private final static String CONNECTSTRING ="192.168.50.201:2181,192.168.50.202:2181,192.168.50.203:2181";
 	private static int sessionTimeOut = 5000;
 	
 	public static ZooKeeper getInstance() throws IOException, InterruptedException {
